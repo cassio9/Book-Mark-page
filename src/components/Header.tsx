@@ -13,7 +13,7 @@ const Header = () => {
 	}, [openNav]);
 
 	return (
-		<header className="flex justify-between  items-center p-8">
+		<header className="flex justify-between  items-center p-8 ">
 			<img className={`${openNav ? "hidden" : ""}`} src={bookmarkLogo} alt="Bookmark logo" />
 			<img
 				className={`${openNav ? "hidden" : ""}`}
@@ -31,12 +31,12 @@ const Header = () => {
 			</nav>
 			{/* Navbar fixed, appears from the right side */}
 			<nav
-				className={`fixed flex flex-col justify-between gap-10 p-4 py-10 text-2xl text-white opacity-[95%] bg-VeryDarkBlue inset-0 
+				className={`fixed z-10 flex flex-col justify-between gap-10 p-4 py-10 text-2xl text-white opacity-[95%] bg-VeryDarkBlue inset-0 
                         transition-all ease-in duration-500 ${openNav ? "top-0" : "hidden"}`}>
 				<div className="">
 					<div className="flex items-center justify-between pb-10">
 						<img
-							className="cursor-pointer filter brightness-0 invert opacity-80  h-7"
+							className="cursor-pointer saturate-0 invert h-7"
 							src={bookmarkLogo}
 							alt=""
 							onClick={() => setOpenNav(false)}
