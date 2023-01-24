@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 function App() {
 	return (
-		<div className="bg-white font-Rubik">
+		<div className="bg-white font-Rubik flex flex-col justify-center">
 			<Header />
 			<Hero />
 			<Features />

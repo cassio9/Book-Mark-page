@@ -10,16 +10,16 @@ const Features = () => {
 	return (
 		<div className="flex flex-col justify-center items-center text-center p-6">
 			<h2 className="text-VeryDarkBlue text-2xl font-medium">Features</h2>
-			<p className="text-md py-6 text-GrayishBlue ">
+			<p className="text-md py-6 text-GrayishBlue max-w-lg">
 				Our aim is to make it quick and easy for you to access your favorite websites. Your
 				bookmarks sync between your devices so you can access them on the go.
 			</p>
-			<ul className="flex flex-col justify-center w-full items-center gap-1">
+			<ul className="flex flex-col justify-center w-full items-center gap-1 max-w-2xl lg:flex-row ">
 				<li
 					onClick={() => setTabFeatures(1)}
-					className={`relative border-y-[1px] cursor-pointer p-4 w-full text-center border-GrayishBlue ${
+					className={`relative border-y-[1px] lg:border-t-0 cursor-pointer p-4 w-full text-center border-GrayishBlue ${
 						tabFeatures == 1
-							? "after:content-[''] after:w-28 after:h-1 after:bg-red-600 after:absolute after:left-[50%] after:-translate-x-[50%] after:bottom-0 font-medium"
+							? "after:content-[''] after:w-28 lg:after:w-full after:h-1 after:bg-red-600 after:absolute after:left-[50%] after:-translate-x-[50%] after:bottom-0 font-medium"
 							: "text-GrayishBlue"
 					}  `}>
 					Simple Bookmarking
@@ -28,7 +28,7 @@ const Features = () => {
 					onClick={() => setTabFeatures(2)}
 					className={`relative border-b-[1px] cursor-pointer p-4 w-full text-center border-GrayishBlue ${
 						tabFeatures == 2
-							? "after:content-[''] after:w-28 after:h-1 after:bg-red-600 after:absolute after:left-[50%] after:-translate-x-[50%] after:bottom-0 font-medium"
+							? "after:content-[''] after:w-24 lg:after:w-full after:h-1 after:bg-red-600 after:absolute after:left-[50%] after:-translate-x-[50%] after:bottom-0 font-medium"
 							: "text-GrayishBlue"
 					}  `}>
 					Speedy Searching
@@ -37,11 +37,13 @@ const Features = () => {
 					onClick={() => setTabFeatures(3)}
 					className={`relative border-b-[1px] cursor-pointer p-4 w-full text-center border-GrayishBlue ${
 						tabFeatures == 3
-							? "after:content-[''] after:w-24 after:h-1 after:bg-red-600 after:absolute after:left-[50%] after:-translate-x-[50%] after:bottom-0 font-medium"
+							? "after:content-[''] after:w-24 lg:after:w-full after:h-1 after:bg-red-600 after:absolute after:left-[50%] after:-translate-x-[50%] after:bottom-0 font-medium"
 							: "text-GrayishBlue"
 					}  `}>
 					Easy Sharing
 				</li>
+			</ul>
+			<div className="lg:w-full">
 				{tabFeatures === 1 ? (
 					<FeatureTabComponent
 						img={Feature1Img}
@@ -67,7 +69,7 @@ const Features = () => {
 						}
 					/>
 				)}
-			</ul>
+			</div>
 		</div>
 	);
 };

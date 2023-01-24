@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import bookmarkLogo from "../assets/logo-bookmark.svg";
+import bookmarkLogoNav from "../assets/logo-bookmarkNav.svg";
 import FacebookIcon from "../assets/icon-facebook.svg";
 import TwitterIcon from "../assets/icon-twitter.svg";
 import HamburgerIcon from "../assets/icon-hamburger.svg";
@@ -13,20 +14,22 @@ const Header = () => {
 	}, [openNav]);
 
 	return (
-		<header className="flex justify-between  items-center p-8 ">
+		<header className="flex justify-between lg:justify-center lg:gap-x-[440px] items-center p-8 ">
 			<img className={`${openNav ? "hidden" : ""}`} src={bookmarkLogo} alt="Bookmark logo" />
 			<img
-				className={`${openNav ? "hidden" : ""}`}
+				className={`lg:hidden ${openNav ? "hidden" : ""}`}
 				src={HamburgerIcon}
 				alt="Hamburger icon"
 				onClick={() => setOpenNav((prev) => !prev)}
 			/>
 			<nav className="hidden lg:flex">
-				<ul className="flex gap-4">
-					<li>Features</li>
-					<li>Pricing</li>
-					<li>Contact</li>
-					<li>Login</li>
+				<ul className="flex gap-6 uppercase items-center">
+					<li className="hover:text-SoftRed cursor-pointer">Features</li>
+					<li className="hover:text-SoftRed cursor-pointer">Pricing</li>
+					<li className="hover:text-SoftRed cursor-pointer">Contact</li>
+					<li className="cursor-pointer py-2 px-8 bg-SoftRed rounded-md text-white hover:text-SoftRed hover:bg-white border-2 border-SoftRed">
+						Login
+					</li>
 				</ul>
 			</nav>
 			{/* Navbar fixed, appears from the right side */}
@@ -36,8 +39,8 @@ const Header = () => {
 				<div className="">
 					<div className="flex items-center justify-between pb-10">
 						<img
-							className="cursor-pointer saturate-0 invert h-7"
-							src={bookmarkLogo}
+							className="cursor-pointer h-7"
+							src={bookmarkLogoNav}
 							alt=""
 							onClick={() => setOpenNav(false)}
 						/>

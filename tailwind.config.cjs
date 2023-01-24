@@ -12,6 +12,10 @@ module.exports = {
 			fontFamily: {
 				Rubik: ["Rubik", "sans-serif"],
 			},
+			translate: {
+				low: "3rem",
+				high: "6rem",
+			},
 		},
 	},
 	plugins: [],

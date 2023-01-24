@@ -7,13 +7,15 @@ const Extensions = () => {
 	return (
 		<div className="flex flex-col justify-center items-center text-center p-6">
 			<h2 className="text-VeryDarkBlue text-2xl font-medium">Download the extension</h2>
-			<p className="text-md py-6 text-GrayishBlue ">
+			<p className="text-md py-6 text-GrayishBlue max-w-lg">
 				We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite
 				you’d like us to prioritize.
 			</p>
-			<CardComponent img={ChromeLogo} text={"Chrome"} version={"62"} />
-			<CardComponent img={FirefoxLogo} text={"Firefox"} version={"55"} />
-			<CardComponent img={OperaLogo} text={"Opera"} version={"46"} />
+			<div className="lg:flex gap-6 lg:pb-10">
+				<CardComponent img={ChromeLogo} text={"Chrome"} version={"62"} translate={0} />
+				<CardComponent img={FirefoxLogo} text={"Firefox"} version={"55"} translate={1} />
+				<CardComponent img={OperaLogo} text={"Opera"} version={"46"} translate={2} />
+			</div>
 		</div>
 	);
 };
